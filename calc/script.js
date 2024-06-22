@@ -1,50 +1,53 @@
-/**
- * Practice: Play with event listeners
- * - Use an event listener and CSS either inline or through an added class to draw a highlight around the entire grid when you hover over it with your mouse.
- * - Add an event listener to each grid cell to highlight that cell when you hover your mouse over it.
- * - Add an event listener to each grid cell to change its background color when it is clicked.
- * - Add an event listener to a specific key on the keyboard to change the background color of the whole page - from dark to light and back again.
- */
 
-const ul = document.querySelector("ul");
 
-// ul.style.borderWidth = "5px";
-// ul.style.borderStyle = "solid";
-// ul.style.borderColor = "green";
 
-ul.addEventListener("mouseenter", () => {
-  ul.style.borderWidth = "5px";
-  ul.style.borderStyle = "solid";
-  ul.style.borderColor = "red";
-});
+var input_field = document.querySelector("#exp")
+var ans_field = document.querySelector("#ans")
 
-ul.addEventListener("mouseleave", () => {
-  ul.style.borderWidth = "5px";
-  ul.style.borderColor = "blue";
-  ul.style.borderStyle = "solid";
-});
 
-const ull = ul.getElementsByTagName("*");
 
-function colr(elem) {
-  elem.addEventListener("click", () => {
-    if (elem.style.backgroundColor != "") {
-      elem.style.backgroundColor = "";
-    } else elem.style.backgroundColor = "skyblue";
-  });
+var nums = document.querySelectorAll(".nums, .ops")
+
+
+function appendInnerHTMLtoInput (button){
+  button.addEventListener('click' , (event) => {
+
+    if (input_field.value === "_") input_field.value = button.innerHTML;
+    else input_field.value += button.innerHTML;
+  } )
 }
 
-for (let item of ull) colr(item);
+for (let elem of nums) appendInnerHTMLtoInput(elem);
 
-const body = document.body;
-body.addEventListener("keydown", (event) => {
-  // event.code holds the current key pressed:
-  console.log(event.code);
 
-  // Test for KeyD (the "d" key)
-  if (event.code === "KeyD") {
-    body.style.backgroundColor === ""
-      ? (body.style.backgroundColor = "hsl(201, 34%, 13%)")
-      : (body.style.backgroundColor = "");
+var del = document.querySelector(".del")
+
+
+del.addEventListener('click' , (event) => {
+  let n = input_field.value.length;
+  if (n === 1) input_field.value = '_';
+  else {
+    input_field.value = input_field.value.slice(0,n-1);
   }
-});
+})
+
+
+var clear = document.querySelector(".clear")
+
+clear.addEventListener('click' , (event) => {
+  input_field.value = '_';
+  ans_field.value = '0'
+})
+
+
+var equal = document.querySelector(".equal")
+
+equal.addEventListener("click", (event)=>{
+  try {
+    const result = eval(input_field.value); 
+    ans_field.value = result;
+} catch (error) {
+  ans_field.value = "Syntax Error";
+}
+})
+
