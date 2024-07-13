@@ -5,10 +5,6 @@
     box-sizing: border-box;
   }
 
-  body{
-    background-color: #000;
-  }
-
   nav {
     padding-top: 5px;
     display: flex;
@@ -45,7 +41,7 @@ h1{
   background-color: black;
   
   font-style: italic;
-  font-size: larger;
+  font-size: 40px;
   text-align: center;
   display: flex;
   align-items: center;
