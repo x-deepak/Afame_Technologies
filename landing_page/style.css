@@ -1,0 +1,245 @@
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+  }
+
+
+  nav {
+    padding-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the nav-links */
+    font-size: large;
+    text-align: center;
+    background-color: rgb(255, 252, 91);
+    border-bottom: 2px solid black;
+    position: relative; /* Make the navbar a relative container */
+    height: 40px;
+  }
+  #logo {
+    position: absolute; /* Position the logo absolutely */
+    left: 20px; /* Distance from the left side */
+    /* height: 50px; */
+    /* margin-bottom: 10px; */
+  }
+  nav {
+    display: flex;
+    gap: 20px;
+  }
+  nav a {
+    text-decoration: none;
+    color: #14004b;
+    font-weight: bold;
+  }
+  nav a:hover {
+    color: #000000;
+  }
+
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    /* padding-top: 56.25%; 16:9 aspect ratio */
+  }
+  .item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 500px;
+  }
+  .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+
+  footer{
+    border-top: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    line-height: 4vh;
+    background-color: rgb(255, 252, 91);
+    color: white;
+
+    
+  }
+  
+  #me{
+
+    background-color: rgb(255, 252, 91);
+    font-size: 1.3rem;
+    color: white;
+    text-shadow: 0 0 3px #171717, 0 0 5px #646464;
+    text-align: center;
+    
+  }
+
+
+
+  .footer-center {
+	/* display: -webkit-box; */
+	/* display: -ms-flexbox; */
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	width: 1200px;
+	margin: 0 auto;
+	padding: 50px 0 10px 180px;
+}
+
+.footer-center .footer-menus {
+	width: 880px;
+}
+
+.footer-menus .wrapper {
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.footer-menus .footer-menu {
+	width: 220px;
+	border-bottom: 0;
+}
+
+.footer-menus .footer-menu .footer-menu-title {
+	margin-bottom: 10px;
+	border-bottom: 0;
+	line-height: 28px;
+	font-size: 14px;
+}
+
+.footer-menus .footer-menu .footer-menu-title {
+	/* font-size: .12rem; */
+	color: #000;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	/* line-height: .28rem; */
+	font-weight: 700;
+}
+
+.footer-menus .footer-menu .footer-menu-list {
+	display: block;
+	font-size: 12px;
+	line-height: 28px;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+element {
+	white-space: nowrap;
+}
+
+
+ul li {
+	list-style: none;
+}
+
+
+
+.footer-bottom .copyright {
+	width: 100%;
+	/* font-size: .1rem; */
+	/* line-height: 14px; */
+	color: #6a6a6a;
+}
+
+.firsthr {
+    width: 900px;
+    color: black;
+    margin: auto;
+    border-top: 1px solid black;
+}
+
+.copyright {
+    text-align: center;
+}
+
+
+.btn-light {
+    color: #333;
+    background-color: #b7b7b7;
+    border-color: #000000;
+  }
+  .btn-light:hover {
+    color: #333;
+    background-color: #e2e6ea;
+    border-color: #dae0e5;
+  }
+  .btn-dark {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
+  }
+  .btn-dark:Visited  {
+    color: #fff;
+    background-color: #909090;
+    border-color: #8d8d8d;
+    }
+    .btn-dark:active  {
+        color: #fff;
+        background-color: #343a40;
+        border-color: #343a40;
+      }
+    .btn-dark:hover {
+        color: #fff;
+        background-color: #909090;
+        border-color: #8d8d8d;
+      }
+
+.buy{
+    margin: 0px 250px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buycont{
+    border-top: 2px solid black;
+}
+
+.prodname {
+	font-size: 20px;
+	font-weight: 600;
+    width: 300px;
+}
+
+.price{
+    font-size: 28px;
+    text-align: right;
+	font-weight: 600;
+    color: red;
+    width: 400px;
+    padding-right: 10px;
+}
+
+.contentss{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+
+.contentss img{
+    width: 1200px;
+
+}
